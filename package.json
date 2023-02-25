@@ -75,5 +75,6 @@
         "infile": "CHANGELOG.md"
       }
     }
-  }
+  },
+  "homepage": "https://tiantingrui.github.io/github-actions-demo"
 }
