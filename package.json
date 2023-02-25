@@ -49,7 +49,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-git",
+      "path": "./node_modules/cz-git",
       "useEmoji": true
     }
   }
