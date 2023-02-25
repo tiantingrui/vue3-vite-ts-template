@@ -37,10 +37,6 @@
 > npm install -g commitizen cz-conventional-changelog
 > echo '{"path": "cz-conventional-changelog"}' > ~/.czrc
 
-### 自定义文档格式
-> cz-customizable
-
-
 ### 自动化包版本控制和changelog
 > release-it
 1. 根据 git commit 生成版本号
