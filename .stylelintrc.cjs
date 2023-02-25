@@ -2,8 +2,9 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-recommended-scss',
-    'stylelint-config-standard-vue',
-    'stylelint-config-prettier'
+    'stylelint-config-standard-vue'
+    //! stylelint v15.x 废弃了很多规则，不需要 prettier. 详情见：https://stylelint.io/migration-guide/to-15/
+    // 'stylelint-config-prettier'
   ],
   plugins: ['stylelint-order'],
   // 不同格式的文件指定自定义语法

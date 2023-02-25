@@ -1,0 +1,30 @@
+# .npmignore 作用: npm 发包 过滤掉的一些无关文件
+# 忽略对所有使用者无关的文件，只保留用户所需的最少文件
+.git/ 
+node_modules/
+.DS_Store
+
+npm-*.log
+yarn-*.log 
+pnpm-*.log 
+
+coverage/
+test/
+.vscode/
+.npmrc
+.npmignore
+
+package-lock.json
+yarn.lock 
+pnpm-lock.yaml
+
+commitlint.config.cjs
+.stylelintrc.cjs 
+.prettierrc.cjs 
+.prettierignore
+.eslintrc.cjs 
+.eslintrc.cjs
+# release-it 配置
+.release-it.json   
+
+
