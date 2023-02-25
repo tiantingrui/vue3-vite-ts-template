@@ -1,7 +1,7 @@
 {
   "name": "vue3-vite-ts-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +15,8 @@
     "lint:fix": "npm run eslint:fix & npm run stylelint:fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "prepare": "husky install",
-    "commit": "git cz"
+    "commit": "git cz",
+    "release": "release-it"
   },
   "dependencies": {
     "vue": "^3.2.45"
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@release-it/conventional-changelog": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "@vitejs/plugin-vue": "^4.0.0",
@@ -36,6 +38,7 @@
     "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.4",
+    "release-it": "^15.6.0",
     "stylelint": "^15.2.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended-scss": "^9.0.1",
@@ -52,5 +55,26 @@
       "path": "./node_modules/cz-git",
       "useEmoji": true
     }
-  }
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "git": {
+      "commitMessage": "chore(release): v${version}"
+    },
+    "npm": {
+      "publish": false
+    },
+    "hooks": {
+      "after:bump": "echo 更新版本成功"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  },
+  "homepage": "https://tiantingrui.github.io/github-actions-demo"
 }
